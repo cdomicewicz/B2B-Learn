@@ -1,0 +1,17 @@
+<div>
+    {{#if consent1.isGlobalContent}}
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">{{consent1.text}}</label>
+    {{/if}}
+</div>
+<br>
+<div>
+    <button id="my-button" disabled>Confirm order</button>
+</div>
+<br>
+<div id="checkbox2-container">
+    {{#if consent2.isLocalContent}}
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2" id="checkbox2label">{{consent2.text}}</label>
+    {{/if}}
+</div>
