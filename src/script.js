@@ -4,8 +4,8 @@
 
         const compiledTemplate = Handlebars.compile(template);
 
-        const consent1 = { text: 'Text 1', isGlobalContent: true };
-        const consent2 = { text: 'Text 2', isLocalContent: true };
+        const consent1 = { text: 'I agree to the terms & conditions', isGlobalContent: true };
+        const consent2 = { text: 'You must agree with the terms and conditions', isLocalContent: true };
 
         const usersHtml = compiledTemplate({consent1: consent1, consent2: consent2});
         $('#handleBarsContent').html(usersHtml);
@@ -18,8 +18,8 @@
           checkbox2Container.hide();
           myButton.prop('disabled', false);
         } else {
-          checkbox2Container.show();
           checkbox2.prop('checked', false);
+          checkbox2Container.show();
           myButton.prop('disabled', true);
         }
         });
